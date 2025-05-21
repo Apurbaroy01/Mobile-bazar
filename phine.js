@@ -140,7 +140,7 @@ const showDetails=(phone)=>{
             </svg>
             </div>
 
-            <h2 class="text-2xl font-bold mb-2">Confirmed!</h2>
+            <h2 class="text-2xl font-bold mb-2">Oder Confirmed!</h2>
             <p class="text-gray-600 mb-4">You have successfully sold the item. Details below:</p>
 
             <div class="bg-gray-50 rounded-xl p-4 mb-6 text-left">
