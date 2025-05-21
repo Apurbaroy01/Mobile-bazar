@@ -116,9 +116,9 @@ const showDetails=(phone)=>{
                 
             </div>
             <div>
-                <input id="product" type="text" placeholder="Type Your-name" class="input input-ghost" />
-                <input id="product-Quntity" type="text" placeholder="phone-number" class="input input-ghost" />
-                <input type="text" placeholder="Address" class="input input-ghost" />
+                <input id="product" type="text" placeholder="Type Your-name" class="input input-ghost" required/>
+                <input id="product-Quntity" type="text" placeholder="phone-number" class="input input-ghost" required/>
+                <input id="address" type="text" placeholder="Address" class="input input-ghost" />
                 
             </div>
             <div class="mt-5 text-center">

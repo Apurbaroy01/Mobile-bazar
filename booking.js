@@ -60,8 +60,8 @@ const displayProduct=(product,quantity)=>{
                   <td>
                   <ul>
                       <a class="justify-between">
-                        
-                        <span class="badge">Delivered✅</span>
+                        Status:
+                        <span class="badge"> Delivered✅</span>
                       </a>
                     <ul>
                   </td>
