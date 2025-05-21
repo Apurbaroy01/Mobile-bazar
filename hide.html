@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sold Confirmation Flow</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<div class="bg-gray-100 text-gray-800 min-h-screen flex items-center justify-center p-6">
+
+  <!-- 🔹 Main Page Content (Initial) -->
+  <div id="mainPage" class="bg-white rounded-xl shadow-md p-6 w-full max-w-lg text-center">
+    <h2 class="text-2xl font-bold mb-4">Sell Your Property</h2>
+    <p class="text-gray-600 mb-6">Click confirm to finalize your sale.</p>
+    <button 
+      onclick="confirmSale()" 
+      class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
+    >
+      Confirm Sale
+    </button>
+  </div>
+
+  <!-- ✅ Sold Confirmation Content (Hidden Initially) -->
+  <div id="confirmationPage" class="hidden bg-white rounded-2xl shadow-xl max-w-md w-full p-6 text-center">
+    <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full">
+      <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+      </svg>
+    </div>
+
+    <h2 class="text-2xl font-bold mb-2">Sale Confirmed!</h2>
+    <p class="text-gray-600 mb-4">You have successfully sold the item. Details below:</p>
+
+    <div class="bg-gray-50 rounded-xl p-4 mb-6 text-left">
+      <p><span class="font-semibold">Item:</span> 3-Bedroom House</p>
+      <p><span class="font-semibold">Buyer:</span> John Doe</p>
+      <p><span class="font-semibold">Sold On:</span> May 21, 2025</p>
+      <p><span class="font-semibold">Price:</span> $450,000</p>
+    </div>
+
+    <button 
+      onclick="goBack()" 
+      class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition"
+    >
+      Back to Home
+    </button>
+  </div>
+
+  <script>
+    function confirmSale() {
+      document.getElementById('mainPage').classList.add('hidden');
+      document.getElementById('confirmationPage').classList.remove('hidden');
+    }
+
+    function goBack() {
+      document.getElementById('confirmationPage').classList.add('hidden');
+      document.getElementById('mainPage').classList.remove('hidden');
+    }
+  </script>
+
+</div>
+</html>
