@@ -22,53 +22,37 @@ const displayProduct=(product,quantity)=>{
 
 
     const div=document.createElement('div');
+    
     div.innerHTML=`
-        <table class="table w-full">
-              
-              <thead>
-                <tr class="bg-base-200">
-                  <th></th>
-                  <th></th>
-                  <th></th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody class="grid grid-flow-col grid-cols-3 gap-4">
-                
-                <tr>
-                  
-                  <td>${product}</td>
-                  
-                  
-                </tr>
-                <tr>
-                  
-                  
-                  <td>${quantity}</td>
-                  
-                </tr>
-                <tr>
-                  
-                  
-        
-                  <td>May / 22 /2025</td>
-                </tr>
-                <tr>
-                  
-                  
-        
-                  <td>
-                  <ul>
-                      <a class="justify-between">
-                        Status:
-                        <span class="badge"> Delivered✅</span>
-                      </a>
-                    <ul>
-                  </td>
-                </tr>
-            
-              </tbody>
-            </table>
+
+      <div class="grid grid-cols-4 sm:grid-cols-4 gap-4 p-4 rounded-lg shadow bg-base-200 border-1 mt-1">
+        <!-- Card 1 -->
+        <div class=" p-1 ">
+          
+          <p>${product}</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class=" p-1 ">
+          
+          <p>${quantity}</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class=" p-1 ">
+          
+          <p>25-May-25</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class=" p-1 ">
+          
+          <p>
+            <span class="badge ">Delivered✅</span>
+          </p>
+        </div>
+      </div>
+
     `;
     ul.appendChild(div);
 };
