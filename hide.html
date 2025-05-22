@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <main>
+<div id="smoothCarousel" class="w-64 overflow-hidden relative rounded-box">
+    <div id="carouselTrack" class="flex transition-all duration-500 ease-in-out">
+    <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" class="w-64 shrink-0" />
+    <img src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp" class="w-64 shrink-0" />
+    <img src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp" class="w-64 shrink-0" />
+    <img src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp" class="w-64 shrink-0" />
+    <img src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp" class="w-64 shrink-0" />
+    <img src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp" class="w-64 shrink-0" />
+    <img src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp" class="w-64 shrink-0" />
+  </div>
+</div>
+
+<script>
+  const track = document.getElementById('carouselTrack');
+  const carousel = document.getElementById('smoothCarousel');
+  const slideWidth = carousel.offsetWidth;
+  let index = 0;
+
+  setInterval(() => {
+    index++;
+    if (index >= track.children.length) {
+      index = 0;
+    }
+    track.style.transform = `translateX(-${slideWidth * index}px)`;
+  }, 3000);
+</script>
+
+    </main>
+</body>
+</html>
