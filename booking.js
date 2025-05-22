@@ -25,7 +25,7 @@ const displayProduct=(product,quantity)=>{
     
     div.innerHTML=`
 
-      <div class="grid grid-cols-4 sm:grid-cols-4 gap-4 p-4 rounded-lg shadow bg-base-200 border-1 mt-1">
+      <div class="grid grid-cols-4 sm:grid-cols-4 gap-4 py-4 rounded-lg shadow bg-base-200 border-1 mt-1">
         <!-- Card 1 -->
         <div class=" p-1 ">
           
